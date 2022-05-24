@@ -11,7 +11,7 @@ fig, figura: caractere
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   escreva("Informe a figura geométrica: Q-Quadrado ou T-Triângulo")
+   escreva("Informe a figura geométrica: Q-Quadrado ou T-Triângulo: ")
    leia(figura)
    escreva ("Informe o lado da figura em cm: ")
    leia(lado)
