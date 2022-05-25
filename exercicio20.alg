@@ -1,28 +1,34 @@
 Algoritmo "NomeSenhaDoWhile"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Crie um programa que permita ao usuário tentar logar em seu Sistema informando seu nome e senha. Repita a operação até que o nome e senha correspondam a um valor armazenado(Marcos – 1234). Caso o usuário digite -1 interrompa a repetição e informe que o programa será finalizado por solicitação do usuário.
+// Descrição   : Solicitar a idade de várias pessoas e imprimir:
+//• Total de pessoas com menos de 18 anos.
+//• Total de pessoas com mais de 60 anos.
+//• O programa termina quando idade for =-99
 // Data atual  : 25/05/2022
 Var
-nome, senha: caractere
+
+contMenor,contIdoso, idade: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
-escreval("Para sair digite -1")
+escreval("Informe -99 para sair")
 
 repita
-escreva("Seu nome: ")
-leia(nome)
+escreva("Informe uma idade: ")
+leia(idade)
 
-se nome="-1" entao
-escreva("O programa será finalizado por solicitação do usuário")
-interrompa
+se (idade >0) e (idade < 18) entao
+contMenor<-contMenor + 1
+senao
+se idade > 60 entao
+contIdoso<-contIdoso + 1
+fimse
 fimse
 
-escreva("Sua senha: ")
-leia(senha)
+ate idade=-99
 
-ate (nome="Marcos") e (senha="1234")
-
+escreval ("Total de pessoas com menos de 18 anos: ",contMenor)
+escreval ("Total de pessoas com mais de 60 anos: ",contIdoso)
 
 Fimalgoritmo

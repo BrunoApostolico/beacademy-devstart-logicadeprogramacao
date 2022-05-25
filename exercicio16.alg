@@ -1,21 +1,28 @@
-Algoritmo "TabuadaComWhile"
+Algoritmo "NomeEsenha"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Crie um programa que, imprima a tabuada de um número digitado pelo usuário.
+// Descrição   : Crie um programa que solicite ao usuário o seu nome e senha do cartão e valide se a senha e nome são corretos (Nome: Marcos e senha:paylivre) e, caso positivo, dê boas vindas ao usuário e, em caso negativo, solicite os dados novamente
 // Data atual  : 25/05/2022
 Var
-numero,i:inteiro
+nome,senha:caractere
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
 
-   escreva("Digite um numero para saber a tabuada: ")
-   leia(numero)
+   escreva("Digite seu nome: ")
+   leia(nome)
+   escreva("Digite sua senha: ")
+   leia(senha)
 
-   i<-1
-   enquanto i<=10 faca
-   escreval(numero," x ",i," = ",numero * i)
-   i<-i+1
+
+   enquanto (nome<>"Marcos") e (senha<>"paylivre") faca
+   escreval("Nome ou senha incorretos")
+   escreva("Digite seu nome: ")
+   leia(nome)
+   escreva("Digite sua senha: ")
+   leia(senha)
    fimenquanto
-
+   
+   escreva ("Bem vindo Marcos! ")
+   
 Fimalgoritmo

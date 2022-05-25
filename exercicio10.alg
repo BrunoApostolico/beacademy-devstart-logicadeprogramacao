@@ -1,37 +1,54 @@
-Algoritmo "FigGeometricaCondicionalCase"
+Algoritmo "SaldoCondicionalCase"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Receba do usuário a figura geométrica que deseja calcular a área e o perímetro (Q-Quadrado ou T-Triângulo) e calcule e exiba a área e o perímetro da figura escolhida
-// Autor(a)    : Bruno Apostólico
-// Data atual  : 23/05/2022
+// Descrição   : utilizando a estrutura escolha caso, permita ao usuário escolher a operação a realizar (depósito ou saque ou transferência) , caso a operação seja de transferência solicite o nome do banco, da agência e conta, receba as informações e, em ao final exiba o valor inicial, a operação realizada e o saldo atual, no caso de transferência exiba também os dados do banco, agência e conta.
+// Data atual  : 24/05/2022
 Var
 // Seção de Declarações das variáveis 
-lado, area, perimetro: real
-fig, figura: caractere
-
+deposito, saldoIni, saldoFim, saque, transferencia: real
+operacao, conta :inteiro
+operTexto, banco, agencia: caractere
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   escreva("Informe a figura geométrica: Q-Quadrado ou T-Triângulo: ")
-   leia(figura)
-   escreva ("Informe o lado da figura em cm: ")
-   leia(lado)
-   
-   escolha figura
-   caso "Q"
-   fig:= "Quadrado"
-   area := lado * lado
-   perimetro := lado * 4
-   
-   caso "T"
-   fig:= "Triangulo"
-   area := (lado * lado)/2
-   perimetro := lado * 3
+   escreva("Escolha uma operação: 1 - Depósito, 2 - Saque ou 3 - Transferência: ")
+   leia(operacao)
 
-   outrocaso
-   resultado :=-1
-   fimescolha
+   saldoIni<-1000
+   escolha operacao
+   caso 1
+   escreva("Informe o valor do Depósito: ")
+   leia(deposito)
+   operTexto<-"Depósito"
+   saldoFim<-saldoIni + deposito
    
-   escreval("A area do ",fig , " é " , area , ", o perímetro é :",perimetro)
+   caso 2
+   escreva("Informe o valor do Saque: ")
+   leia(saque)
+   operTexto<-"Saque"
+      saldoFim<-saldoIni - saque
+
+   caso 3
+   escreva("Informe o nome do Banco: ")
+   leia(banco)
+      escreva("Informe a Agência: ")
+      leia(agencia)
+         escreva("Informe a Conta: ")
+         leia(conta)
+            escreva("Informe o valor da Transferência: ")
+            leia(transferencia)
+         
+   operTexto<-"Transferência"
+      saldoFim<-saldoIni - transferencia
+
+   escreval("O banco é: ",banco)
+      escreval("A agência é: ",agencia)
+         escreval("A conta é: ",conta)
+   fimescolha
+
+   
+   escreval("Seu saldo inicial era de: R$ ", saldoIni)
+   escreval("A operação realizada foi: ",operTexto)
+   escreval("O saldo atual da sua conta é: R$ ",saldoFim)
 
 
 Fimalgoritmo

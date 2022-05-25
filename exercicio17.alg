@@ -1,28 +1,50 @@
-Algoritmo "NomeEsenha"
+Algoritmo "OperacaoMatematica"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Crie um programa que solicite ao usuário o seu nome e senha do cartão e valide se a senha e nome são corretos (Nome: Marcos e senha:paylivre) e, caso positivo, dê boas vindas ao usuário e, em caso negativo, solicite os dados novamente
+// Descrição   : Crie um programa que realize as 4 operações matemática a partir de dois números que serão digitados pelo usuário. Após isto imprima os valores na tela e em seguida pergunte se ele quer realizar novo cálculo, repetido as operações enquanto o usuário desejar continuar.
 // Data atual  : 25/05/2022
 Var
-nome,senha:caractere
+numero1,numero2,soma,subtracao,multiplicacao: inteiro
+divisao: real
+resposta: caractere
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
 
-   escreva("Digite seu nome: ")
-   leia(nome)
-   escreva("Digite sua senha: ")
-   leia(senha)
+   escreva("Digite um numero: ")
+   leia(numero1)
+   escreva("Digite outro numero: ")
+   leia(numero2)
+   soma <- numero1 + numero2
+   subtracao <- numero1 - numero2
+   multiplicacao <- numero1 * numero2
+   divisao <- numero1 / numero2
 
-
-   enquanto (nome<>"Marcos") e (senha<>"paylivre") faca
-   escreval("Nome ou senha incorretos")
-   escreva("Digite seu nome: ")
-   leia(nome)
-   escreva("Digite sua senha: ")
-   leia(senha)
+   escreval("A soma é: ",soma)
+   escreval("A subtracao é: ",subtracao)
+   escreval("A multiplicacao é: ",multiplicacao)
+   escreval("A divisao é: ",divisao)
+   
+   escreva("Deseja realizar novo cálculo? ")
+   leia(resposta)
+   
+   enquanto (resposta="sim") faca
+   escreva("Digite um numero: ")
+   leia(numero1)
+   escreva("Digite outro numero: ")
+   leia(numero2)
+   soma <- numero1 + numero2
+   subtracao <- numero1 - numero2
+   multiplicacao <- numero1 * numero2
+   divisao <- numero1 / numero2
+   escreval("A soma é: ",soma)
+   escreval("A subtracao é: ",subtracao)
+   escreval("A multiplicacao é: ",multiplicacao)
+   escreval("A divisao é: ",divisao)
+   
+   escreva("Deseja realizar novo cálculo? ")
+   leia(resposta)
    fimenquanto
    
-   escreva ("Bem vindo Marcos! ")
    
 Fimalgoritmo

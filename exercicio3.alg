@@ -1,25 +1,26 @@
-Algoritmo "CalculoIMC"
+Algoritmo "OperadoresAritméticos"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Solicita o nome, peso e altura, calcula o IMC e imprime na tela
+// Descrição   : Solicita o nome e a idade, faz verificações e imprime na tela
 // Autor(a)    : Bruno Apostólico
 // Data atual  : 23/05/2022
 Var
 // Seção de Declarações das variáveis 
 nome: caractere
-peso, altura, imc: real
+idade: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
    escreva("Digite seu nome: ")
    leia(nome)
-   escreva("Digite seu peso: ")
-   leia(peso)
-   escreva("Digite sua altura: ")
-   leia(altura)
+   escreva("Digite sua idade: ")
+   leia(idade)
 
-   imc <- peso/(altura*altura)// O calculo do IMC é feito dividindo o peso pelo quadrado da altura
+   escreval("Seu nome é: ", nome, " você tem ",idade, " anos")
+   escreval("Idade é maior que 18? ",(idade > 18))
+   escreval("Idade é igual a 25! ",(idade = 25))
+   escreval("Idade é igual a 25 e nome diferente de Marcos! ",(idade = 25) E (nome <> "Marcos"))
+   escreval("Idade é diferente de 25 e nome igual a Marcos! ",(idade <> 25) OU (nome="Marcos"))
+   escreval("Idade divida por 2 é igual a 0? ",(idade mod 2=0))
 
-   escreval("Seu nome é: " + nome + " seu peso é: ", peso, " e sua altura é: ", altura)
-   escreval("Seu IMC é: ", imc)
 Fimalgoritmo

@@ -1,38 +1,25 @@
-Algoritmo "IMCcondicional"
+Algoritmo "IdadeClassificacao"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Solicita altura e o peso e classifica o IMC conforme tabela
+// Descrição   : Solicita a idade e classifica conforme tabela
 // Autor(a)    : Bruno Apostólico
 // Data atual  : 23/05/2022
 Var
 // Seção de Declarações das variáveis 
-peso, altura, imc: real
+idade: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   escreva("Informe sua altura: ")
-   leia(altura)
-   escreva("Informe seu peso: ")
-   leia(peso)
-   
-   imc <- peso/(altura*altura)
-   escreval ("IMC = ",imc)
+   escreva("Informe sua idade: ")
+   leia(idade)
 
-   se imc < 19 entao
-   escreval ("Você está abaixo do peso")
+   se idade < 18 entao
+   escreval ("Menor de idade")
    senao
-        se (imc >= 19) E (imc < 25) entao
-        escreval ("Você está no peso normal")
+        se (idade >= 18) E (idade < 60) entao
+        escreval ("Adulto")
    senao
-        se (imc >=25) E (imc < 30) entao
-        escreval ("Você está com sobrepeso")
-   senao
-        se (imc >=30) E (imc < 40) entao
-        escreval ("Você está com Obesidade Tipo I")
-   senao
-        escreval("Você está com Obesidade Mórbida")
-   fimse
-   fimse
+        escreval("Idoso")
    fimse
    fimse
 

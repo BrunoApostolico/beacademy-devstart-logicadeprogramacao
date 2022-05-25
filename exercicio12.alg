@@ -1,7 +1,7 @@
-Algoritmo "TabuadaComFor"
+Algoritmo "Multiplo0e100"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Crie um programa que receba do usuário um número e apresente a Tabuada deste
+// Descrição   : Crie um programa que apresente os múltiplos de dois entre 0 e 100.
 // Data atual  : 24/05/2022
 Var
 // Seção de Declarações das variáveis 
@@ -9,12 +9,12 @@ numero,i:inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   escreva("Informe um número inteiro: ")
-   leia(numero)
+   escreval("Multiplos de 2 entre 0 e 100: ")
 
-   escreval ("Tabuada de ",numero, " é: ")
-   para i de 1 ate 10 faca
-   escreval(numero," x",i," = ", numero * i)
+   para i de 0 ate 100 faca
+   se (i mod 2 = 0) entao
+   escreval(i)
+   fimse
    fimpara
 
 

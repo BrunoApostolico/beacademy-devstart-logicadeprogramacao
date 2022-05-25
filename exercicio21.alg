@@ -1,34 +1,24 @@
-Algoritmo "NomeSenhaDoWhile"
+Algoritmo "Soma100primeiros"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Solicitar a idade de várias pessoas e imprimir:
-//• Total de pessoas com menos de 18 anos.
-//• Total de pessoas com mais de 60 anos.
-//• O programa termina quando idade for =-99
+// Descrição   : Apresentar o total da soma obtida dos cem primeiros números inteiros.
 // Data atual  : 25/05/2022
 Var
 
-contMenor,contIdoso, idade: inteiro
+numero, soma: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
-escreval("Informe -99 para sair")
+escreval("Soma dos 100 primeiros numeros inteiros")
 
+numero<-1
 repita
-escreva("Informe uma idade: ")
-leia(idade)
+soma<-soma+numero
 
-se (idade >0) e (idade < 18) entao
-contMenor<-contMenor + 1
-senao
-se idade > 60 entao
-contIdoso<-contIdoso + 1
-fimse
-fimse
+numero<-numero+1
+ate numero=100
 
-ate idade=-99
+escreval ("A soma é: ",soma)
 
-escreval ("Total de pessoas com menos de 18 anos: ",contMenor)
-escreval ("Total de pessoas com mais de 60 anos: ",contIdoso)
 
 Fimalgoritmo

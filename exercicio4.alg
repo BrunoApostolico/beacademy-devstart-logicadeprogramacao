@@ -1,26 +1,24 @@
-Algoritmo "OperadoresAritméticos"
+Algoritmo "Saldo"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Solicita o nome e a idade, faz verificações e imprime na tela
+// Descrição   : Solicita o depósito e informa na tela o saldo inicial, final e o deposito
 // Autor(a)    : Bruno Apostólico
 // Data atual  : 23/05/2022
 Var
 // Seção de Declarações das variáveis 
-nome: caractere
-idade: inteiro
+deposito, saldoIni, saldoFim: real
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   escreva("Digite seu nome: ")
-   leia(nome)
-   escreva("Digite sua idade: ")
-   leia(idade)
+   escreva("Digite o valor do depósito: ")
+   leia(deposito)
 
-   escreval("Seu nome é: ", nome, " você tem ",idade, " anos")
-   escreval("Idade é maior que 18? ",(idade > 18))
-   escreval("Idade é igual a 25! ",(idade = 25))
-   escreval("Idade é igual a 25 e nome diferente de Marcos! ",(idade = 25) E (nome <> "Marcos"))
-   escreval("Idade é diferente de 25 e nome igual a Marcos! ",(idade <> 25) OU (nome="Marcos"))
-   escreval("Idade divida por 2 é igual a 0? ",(idade mod 2=0))
+   saldoIni<-1000
+   saldoFim<-saldoIni+deposito
+
+   escreval("Seu saldo inicial é de: R$ ", saldoIni)
+   escreval("Seu depósito foi de: R$ ",deposito)
+   escreval("O saldo atual da sua conta é: R$ ",saldoFim)
+
 
 Fimalgoritmo

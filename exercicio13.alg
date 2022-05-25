@@ -1,18 +1,23 @@
-Algoritmo "Multiplo0e100"
+Algoritmo "MultiploDe3"
 // Disciplina   : [Linguagem e Lógica de Programação]
 // Professor   : Marcos Monteiro
-// Descrição   : Crie um programa que apresente os múltiplos de dois entre 0 e 100.
+// Descrição   : Crie um programa que imprima os múltiplos de 3 entre dois números digitados pelo usuário
 // Data atual  : 24/05/2022
 Var
 // Seção de Declarações das variáveis 
-numero,i:inteiro
+num1,num2,i:inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-   escreval("Multiplos de 2 entre 0 e 100: ")
+   escreval("Multiplos de 3 entre 2 numeros: ")
 
-   para i de 0 ate 100 faca
-   se (i mod 2 = 0) entao
+   escreval("Informe o primeiro numero: ")
+   leia(num1)
+   escreval("Informe o segundo numero: ")
+   leia(num2)
+   
+   para i de num1 ate num2 faca
+   se (i mod 3 = 0) entao
    escreval(i)
    fimse
    fimpara
